@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>My test page</title>
+  </head>
+  <body>
+    {% if username %}
+    <form action="" method="post">
+        {% csrf_token %}
+        {{ form.as_table }}
+        <!-- <label for="team_name">Enter name: </label>
+        <input id="team_name" type="text" name="name_field" value="Default name for team."> -->
+        <button type="submit" class="btn btn-info" name="del">add</button>
+    </form>
+    {% endif %}
+  </body>
+</html>

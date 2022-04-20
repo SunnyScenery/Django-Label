@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>My test page</title>
+  </head>
+  <body>
+    {% if labels %}
+    <ul>
+    {% for question in labels %}
+        <li><a href="/labelapp/{{ username }}/{{ question.label_text }}/update/">{{ question.label_text }}</a></li>
+    {% endfor %}
+    </ul>
+    {% else %}
+        <p>No labels are available.</p>
+    {% endif %}
+    <a href="/labelapp/{{ username }}/add/" class="button">add new label</a>
+    
+  </body>
+</html>
